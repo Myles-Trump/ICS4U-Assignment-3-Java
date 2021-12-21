@@ -37,48 +37,74 @@ final class Palindrome {
     }
 
     /**
+    * The isValid function.
+    *
+    * @param 
+    */
+/**    public static void int isValid(final int startingInteger,
+        final int reversed, final int loop, final int conversionOutlet) {
+
+        loop = loop + 1;
+        int firstHalf;
+        int secondHalf;
+        int possiblePalindrome = reversed + conversionOutlet;
+        if (possiblePalindrome < C10) {
+            firstHalf = ((int) (possiblePalindrome / C10)) * C10;
+            secondHalf = possiblePalindrome % C10;
+
+        } else if (possiblePalindrome < C100) {
+            firstHalf = ((int) (possiblePalindrome / C100)) * C100;
+            secondHalf = possiblePalindrome % C100;
+
+        } if (firstHalf == secondHalf) {
+            System.out.println(startingInteger + " has a depth " + loop +
+            " palindrome.");
+
+        } else {
+            // run loop until num becomes 0
+            while(possiblePalindrome != 0) {
+    
+                // get last digit from num
+                int digit2 = possiblePalindrome % C10;
+                reversed = reversed * C10 + digit2;
+
+                // remove the last digit from num
+                possiblePalindrome /= C10;
+
+        }
+    }
+}
+*/
+    /**
     * The palindrome() function .
     *
-    * @return answer of factorial
-    * @param inputtedInteger inputted integer's factorial will be solved
+    * @return pass the results to another function
+    * @param startingInteger starts at 1 gets increased each round to a max
+    * of 99
+    * @param conversionOutlet same as startingInteger except is used in calcs
     */
     public static int palindrome(final int startingInteger,
         final int conversionOutlet) {
 
-        boolean isPalindrome = false;
-
         if (startingInteger < C100) {
             conversionOutlet = startingInteger;
 
-            while (isPalindrome == false) {
-
-                if (startingInteger >= TEN) {
-                    // "borrowed" from
+            if (startingInteger >= C10) {
+                // "borrowed" from
 //https://www.programiz.com/java-programming/examples/reverse-number
-                    // run loop until num becomes 0
-                    while(conversionOutlet != 0) {
+                // run loop until num becomes 0
+                while(conversionOutlet != 0) {
     
-                        // get last digit from num
-                        int digit = conversionOutlet % C10;
-                        reversed = reversed * C10 + digit;
+                    // get last digit from num
+                    int digit = conversionOutlet % C10;
+                    reversed = reversed * C10 + digit;
 
-                        // remove the last digit from num
-                        conversionOutlet /= C10;
-                    }
+                    // remove the last digit from num
+                    conversionOutlet /= C10;
                 }
-                int firstHalf;
-                int secondHalf;
-                possiblePalindrome = reversed + startingInteger;
-                if (possiblePalindrome < C10) {
-                    firstHalf = ((int) (possiblePalindrome / C10)) * C10;
-                    secondHalf = possiblePalindrome % C10;
-
-                } else if (possiblePalindrome < C100) {
-                    firstHalf = ((int) (possiblePalindrome / C100)) * C100;
-                    secondHalf = possiblePalindrome % C100;
-                
-
-                }
+                //int loop = 1;
+                //isValid(startingInteger, reversed, loop, conversionOutlet);
+                //palindrome(startingInteger, conversionOutlet);
             }
         }
     }
