@@ -82,7 +82,7 @@ final class SolvePalindrome {
     * @param depth starting depth
     */
     public static int findDepth(final int testInt, final int depth) {
-        if (isPalindrome(testInt) == true) {
+        if (isPalindrome(testInt)) {
             return depth;
 
         } else {
