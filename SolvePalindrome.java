@@ -7,8 +7,6 @@
 * @since   2021-12-20
 */
 
-import java.util.Scanner;
-
 /**
 * This is a program that blanks.
 */
@@ -49,11 +47,8 @@ final class SolvePalindrome {
 
         if (reversed == testInt) {
             return true;
-
-        } else {
-            return false;
-
         }
+        return false;
     }
 
     /**
@@ -67,7 +62,7 @@ final class SolvePalindrome {
         int reversed = 0;
         int num = sourceNum;
         // run loop until num becomes 0
-        while(num != 0) {
+        while (num != 0) {
 
             // get last digit from num
             digit = num % C10;
